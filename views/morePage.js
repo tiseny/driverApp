@@ -11,7 +11,7 @@ import {
 var Dimensions = require('Dimensions');
 var {screenWidth,screenHeight} = Dimensions.get('window');
 
-export default class OtherPage extends Component {
+export default class MorePage extends Component {
   constructor(props){
     super(props);
   }
@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
   ViewStyle: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'green',
+    alignItems: 'center'
   },
   textStyle: {
     textAlign: 'center',
@@ -48,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('driverApp', () => OtherPage);
+AppRegistry.registerComponent('driverApp', () => MorePage);

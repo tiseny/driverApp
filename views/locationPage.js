@@ -84,7 +84,7 @@ export default class LocationPage extends Component {
   savePosition() {
     AsyncStorage.getItem('userInfo').then(value => {
       const user = JSON.parse(value)
-      fetch('http://wlTestApi.wlwulian.com/api/Location', {
+      fetch('/Location', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ export default class LocationPage extends Component {
     return new Promise((resolve,reject) => {
       AsyncStorage.getItem('userInfo').then(value => {
         const user = JSON.parse(value)
-        fetch('http://wlTestApi.wlwulian.com/api/OrderTruck/GetByType?type=RECEIVED', {
+        fetch('OrderTruck/GetByType?type=RECEIVED', {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
